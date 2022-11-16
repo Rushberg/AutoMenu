@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace AutoMenu;
 
-public class SubMenu
+public class AutoMenu
 {
     private readonly List<OptionHolder> _options = new List<OptionHolder>();
     private readonly bool _isMain;
@@ -17,7 +17,7 @@ public class SubMenu
 
     public delegate object HistoryCall();
 
-    public SubMenu(string? name, bool isMain = false)
+    public AutoMenu(string? name, bool isMain = false)
     {
         _isMain = isMain;
         _name = name;
@@ -25,12 +25,12 @@ public class SubMenu
         if (!isMain) return;
 
 
-        SubMenu? historyMenu = new SubMenu(_historyName);
-        AddOption(_historyName, typeof(SubMenu).GetMethod(nameof(historyMenu.Show)), historyMenu);
+        AutoMenu? historyMenu = new AutoMenu(_historyName);
+        AddOption(_historyName, typeof(AutoMenu).GetMethod(nameof(historyMenu.Show)), historyMenu);
 
         MethodCalled += (option, args) =>
         {
-            if (option.Target?.GetType() != typeof(SubMenu))
+            if (option.Target?.GetType() != typeof(AutoMenu))
             {
                 var argsInfo = string.Join(", ", option.Args.Select((param, i) => $"{ToHumanCase(param.Name)}: {args[i]}"));
                 HistoryCall call = () => option.Callback.Invoke(option.Target, args.ToArray());
