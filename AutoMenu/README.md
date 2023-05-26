@@ -1,8 +1,10 @@
 This is an easy to set up and use CLI menu. 
 
-You give it a function and it will request proper input for each argument and validate it on it's own.
+Just it a function and it will request proper input for each argument and validate it on it's own.
 
 Note that arguments have to be simple types. For functions receiving objects, wrapper is needed.
+
+You can also re-run command from history submenu without re-typing arguments  
 
 See the example below:
 
@@ -31,3 +33,9 @@ See the example below:
             return $"They {they} are {are} indeed {indeed} validated {validated}";
         }
     }
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)

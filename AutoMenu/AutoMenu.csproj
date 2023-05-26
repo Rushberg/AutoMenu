@@ -8,11 +8,13 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
         <Description>Easy to set up and use CLI menu.</Description>
+        <Version>1.0.1</Version>
+        <PackageReleaseNotes>Updated readme</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>       
         <None Include="README.md" Pack="true" PackagePath="\" />
-        <None Include="LICENSE.txt" Pack="true" PackagePath=""/>
+        <None Include="LICENSE.txt" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
