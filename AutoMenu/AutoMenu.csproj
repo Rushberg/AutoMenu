@@ -4,6 +4,15 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Title>AutoMenu</Title>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <Description>Easy to set up and use CLI menu.</Description>
     </PropertyGroup>
+
+    <ItemGroup>       
+        <None Include="README.md" Pack="true" PackagePath="\" />
+        <None Include="LICENSE.txt" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>
