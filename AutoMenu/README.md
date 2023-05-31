@@ -1,6 +1,6 @@
 This is an easy to set up and use CLI menu. 
 
-Just it a function and it will request proper input for each argument and validate it on it's own.
+Just give it a function and it will request proper input for each argument and validate it on it's own.
 
 Note that arguments have to be simple types. For functions receiving objects, wrapper is needed.
 
@@ -14,14 +14,12 @@ See the example below:
     
     public static class App
     {
-    public static void Main(string[] args) {
-    var mainMenu = new AutoMenu("Main", true);
-    var subMenu = new AutoMenu("Second Level");
-    mainMenu.AddOption("Go To Second", typeof(AutoMenu).GetMethod(nameof(subMenu.Show)), subMenu);
-    mainMenu.AddOption("Say Hello", typeof(App).GetMethod(nameof(SayHello)), null);
-    
-            subMenu.AddOption(null, typeof(App).GetMethod(nameof(LotsOfArgs)), null);
-            
+        public static void Main(string[] args) {
+            var mainMenu = new AutoMenu("Main", true);
+            var subMenu = new AutoMenu("Second Level");
+            mainMenu.AddOption("Go To Second", typeof(AutoMenu).GetMethod(nameof(subMenu.Show)), subMenu);
+            mainMenu.AddOption("Say Hello", typeof(App).GetMethod(nameof(SayHello)), null);    
+            subMenu.AddOption(null, typeof(App).GetMethod(nameof(LotsOfArgs)), null);            
             mainMenu.Show();
         }
     
