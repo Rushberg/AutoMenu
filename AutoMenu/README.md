@@ -34,6 +34,6 @@ See the example below:
 
 [![img.png](img.png)](https://github.com/AlexYLD/AutoMenu/blob/main/AutoMenu/img.png)
 
-[![img_1.png](img_1.png)](https://github.com/AlexYLD/AutoMenu/edit/main/AutoMenu/README.md)
+[![img.png](img_1.png)](https://github.com/AlexYLD/AutoMenu/blob/main/AutoMenu/img_1.png)
 
-[![img_2.png](img_2.png)](https://github.com/AlexYLD/AutoMenu/edit/main/AutoMenu/README.md)
+[![img.png](img_2.png)](https://github.com/AlexYLD/AutoMenu/blob/main/AutoMenu/img_2.png)
